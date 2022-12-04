@@ -28,7 +28,11 @@ const Calendar: FC<calendarProps> = ({ setFact }) => {
             let date = value ? value.date() : 20
             let month = value ? value.month() + 1 : 4
 
-            const response = await axios.get(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${month}/${date}/date?json`)
+            const response = await axios.get(`https://cors-anywhere.herokuapp.com/http://numbersapi.com/${month}/${date}/date?json`, {
+                headers: {
+                  'x-requested-with': 'text/plain'
+                }
+              })
 
             factInfo.text = response.data.text
             factInfo.date = date

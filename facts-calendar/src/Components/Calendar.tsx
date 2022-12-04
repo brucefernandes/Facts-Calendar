@@ -28,7 +28,7 @@ const Calendar: FC<calendarProps> = ({ setFact }) => {
             let date = value ? value.date() : 20
             let month = value ? value.month() + 1 : 4
 
-            const response = await axios.get(`https://numbersapi.com/${month}/${date}/date?json`)
+            const response = await axios.get(`http://numbersapi.com/${month}/${date}/date?json`)
 
             factInfo.text = response.data.text
             factInfo.date = date

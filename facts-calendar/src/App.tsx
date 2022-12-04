@@ -5,7 +5,7 @@ import Base from './Components/Base';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
       <Base />
     </div>
   );

@@ -31,6 +31,7 @@ const Calendar: FC<calendarProps> = ({ setFact }) => {
             factInfo.text = response.data.text
             factInfo.date = date
             factInfo.month = month
+            factInfo.id = Math.floor(Math.random() * (10 * 100 - 1 * 100) + 1 * 100) / (1 * 100);
 
             setFact(factInfo)
 
@@ -42,7 +43,7 @@ const Calendar: FC<calendarProps> = ({ setFact }) => {
 
 
     return (
-        <div>
+        <div className="calender">
             <LocalizationProvider dateAdapter={AdapterDayjs}>
                 <StaticDatePicker
                     displayStaticWrapperAs="desktop"

@@ -4,3 +4,14 @@
     justify-content: center;
 
 }
+
+.factText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ebebeb;
+    font: 'Roboto';
+    font-weight: 500;
+
+
+}

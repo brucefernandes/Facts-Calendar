@@ -4,19 +4,21 @@ import TextField from '@mui/material/TextField';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { StaticDatePicker } from '@mui/x-date-pickers/StaticDatePicker';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { FactType } from '../types';
+
 
 
 interface calendarProps {
     setFact: (fact: FactType) => void
 }
 
-
 const Calendar: FC<calendarProps> = ({ setFact }) => {
 
-    const [value, setValue] = useState<Dayjs | null>(dayjs('2022-04-20'));
+
+    const [value, setValue] = useState<Dayjs | null>(dayjs());
 
     useEffect(() => {
 
@@ -49,11 +51,11 @@ const Calendar: FC<calendarProps> = ({ setFact }) => {
                     displayStaticWrapperAs="desktop"
                     openTo="day"
                     value={value}
-                    onChange={(newValue) => {
-                        setValue(newValue);
-                    }}
+                    onChange={(newValue) => { setValue(newValue); }}
                     renderInput={(params) => <TextField {...params} />}
+
                 />
+
             </LocalizationProvider>
         </div>
     )

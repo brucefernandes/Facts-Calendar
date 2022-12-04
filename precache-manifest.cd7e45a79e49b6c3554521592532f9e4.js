@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/Facts-Calendar/static/js/runtime~main.e1b10eba.js"
   },
   {
-    "revision": "7824cf5f0507d0c1b4e3d5b3e22e93a8",
+    "revision": "e7ed76fed2e89b2731796d603948f23b",
     "url": "/Facts-Calendar/index.html"
   }
 ];

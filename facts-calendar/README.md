@@ -5,7 +5,14 @@ Users can save their fun facts into a table showing the fact along with the corr
 
 ## Web App Link
 
-You can find the application here : 
+You can find the application here : https://brucefernandes.github.io/Facts-Calendar/
+
+## CORS issue with numbersAPI
+
+The application uses the http://numbersapi.com/#42 to get facts about dates. Since the API does not support CORS policies (it uses http) I had to find a proxy
+that allowed me to use it. I decided to use https://cors-anywhere.herokuapp.com/corsdemo. I added this proxy just before my GET request url. To enable this to work, visit the link https://cors-anywhere.herokuapp.com/corsdemo and click the "Request temporary access to the demo server", which should then allow you to visit the web link for my app and receive data. 
+
+The local version of the app does not require this.
 
 ### Stack 
 

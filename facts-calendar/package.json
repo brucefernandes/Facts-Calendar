@@ -1,7 +1,7 @@
 {
   "name": "facts-calendar",
   "version": "0.1.0",
-  "homepage": "https://factscalender.github.io/Facts-Calendar",
+  "homepage": "https://brucefernandes.github.io/Facts-Calendar",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "facts-calendar -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
